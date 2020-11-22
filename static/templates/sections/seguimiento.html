@@ -1,0 +1,799 @@
+<div class="card mb-2 mt-2">
+		
+	<div class="card-header">
+		<div class="form-inline row">
+			<div class="col-lg-2 h5 text-center">SEGUIMIENTOS</div>
+			<div class="col-lg-4">
+				<button class="btn btn-outline-success" type="button" ng-click="vm.addSeguimiento()">
+					Nuevo
+				</button>
+			</div>			
+		</div>
+	</div>
+	
+	<div	class="card-body">
+		<div class="row">
+			<!--Begin First Column -->
+			<div class="col-lg-3 ml-2">
+				<div class="row mb-1">
+					<label class="col-form-label form-control btn-light">FECHA</label>
+				</div>	
+				<div class="row mb-1">
+					<label class="col-form-label form-control btn-light">ADHERENCIA AL TRATAMIENTO</label>
+				</div>
+				<div class="row mb-1">
+					<label class="col-form-label form-control btn-light">ECG</label>
+				</div>
+				<div class="row mb-1">
+					<label class="col-form-label form-control btn-light">RIESGO CARDIOVASCULAR</label>
+				</div>
+				<div class="row mb-1">
+					<label class="col-form-label form-control btn-light">AUTOMONITOREO</label>
+				</div>
+				<hr>
+				<div class="row">
+					<label class="col-lg-2 titulo-vertical text-center">DATOS CLINICOS</label>
+					<div class="col-lg-10">
+						<div class="row mb-1">
+							<label class="col-form-label form-control btn-light">TABACO</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-lg-5 col-form-label form-control btn-light">PESO</label>
+							<label class="offset-lg-2 col-lg-5 col-form-label form-control btn-light">IMC</label>
+						</div>				
+						<div class="row mb-1">
+							<label class="col-form-label form-control btn-light">TENSION ARTERIAL</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-form-label form-control btn-light">PERIMETRO CINTURA</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-form-label form-control btn-light">EXAMEN PIES</label>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<label class="col-lg-2 titulo-vertical text-center">DATOS DE LABORATORIO</label>
+					<div class="col-lg-10">
+						<div class="row mb-1">
+							<label class="col-lg-5 col-form-label form-control btn-light">GLUCEMIA</label>
+							<label class="offset-lg-2 col-lg-5 col-form-label form-control btn-light">Hb1Ac</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-lg-3 col-form-label form-control btn-light">GOT</label>
+							<label class="offset-lg-1 col-lg-3 col-form-label form-control btn-light">GPT</label>
+							<label class="offset-lg-1 col-lg-4 col-form-label form-control btn-light">FAL</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-form-label form-control btn-light">COLESTEROL TOTAL</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-lg-3 col-form-label form-control btn-light">HDL</label>
+							<label class="offset-lg-1 col-lg-3 col-form-label form-control btn-light">LDL</label>
+							<label class="offset-lg-1 col-lg-4 col-form-label form-control btn-light">TRIGLIC</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-form-label form-control btn-light">CLEARENCE CREAT.</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-lg-6 col-form-label form-control btn-light">CREATININA</label>
+							<label class="offset-lg-1 col-lg-5 col-form-label form-control btn-light">ESTADIO</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-lg-4 col-form-label form-control btn-light">PROT.</label>
+							<label class="offset-lg-1 col-lg-7 col-form-label form-control btn-light">CREATININURIA</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-form-label form-control btn-light">MICROALBUMINURIA [mg/dl]</label>
+						</div>
+					</div>
+				</div>
+				<hr>				
+				<div class="row">
+					<label class="col-lg-2 titulo-vertical text-center">MEDICAMENTOS</label>
+					<div class="col-lg-10">
+						<div class="row mb-1">
+							<label class="col-form-label form-control btn-light">INSULINA NPH</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-form-label form-control btn-light">INSULINA RAPIDA</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-form-label form-control btn-light">METFORMINA</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-form-label form-control btn-light">GLIBENCLAMIDA</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-form-label form-control btn-light">ENALAPRIL</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-form-label form-control btn-light">ATENOLOL</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-form-label form-control btn-light">FUROSEMIDA</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-form-label form-control btn-light">HIDROCLOROTIAZIDA</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-form-label form-control btn-light">AAS</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-form-label form-control btn-light">SIMVASTATINA</label>
+						</div>
+						<div class="row mb-1">
+							<label class="col-form-label form-control btn-light">FENOFIBRATO</label>
+						</div>
+					</div>
+				</div>						
+			</div>
+			<!--End First Column -->
+			
+			<!--Begin Second Column -->
+			<div class="col-lg-2 ml-4" dir-paginate="seguimiento in vm.seguimientos | itemsPerPage:4">
+				<div ng-click="vm.editSeguimiento(seguimiento.id)" data-toggle="modal" data-target="#edit-seguimiento">
+					<div class="row mb-1">
+						<input class="col-form-label form-control" type=date value="{{seguimiento.fecha}}" readonly>
+					</div>	
+					<div class="row mb-1">
+						<label class="col-form-label form-control" ng-if="seguimiento.adherencia_al_tratamiento == 0">NO</label>
+						<label class="col-form-label form-control" ng-if="seguimiento.adherencia_al_tratamiento == 1">SI</label>					
+					</div>
+					<div class="row mb-1">					
+						<label class="col-form-label form-control" ng-if="seguimiento.ecg == 0">NO</label>
+						<label class="col-form-label form-control" ng-if="seguimiento.ecg == 1">SI</label>					
+					</div>				
+					<div class="row mb-1">
+						<label class="col-form-label form-control" ng-if="seguimiento.riesgo_cardiovascular == 1">menor a 10%</label>
+						<label class="col-form-label form-control" ng-if="seguimiento.riesgo_cardiovascular == 2">de 10% a menor 20%</label>
+						<label class="col-form-label form-control" ng-if="seguimiento.riesgo_cardiovascular == 3">de 20% a menor 30%</label>
+						<label class="col-form-label form-control" ng-if="seguimiento.riesgo_cardiovascular == 4">de 30% a menor 40%</label>
+						<label class="col-form-label form-control" ng-if="seguimiento.riesgo_cardiovascular == 5">mayor a 40%</label>					
+					</div>
+					<div class="row mb-1">
+						<label class="col-form-label form-control" ng-if="seguimiento.automonitoreo == 0">NO</label>
+						<label class="col-form-label form-control" ng-if="seguimiento.automonitoreo == 1">SI</label>					
+					</div>
+				</div>				
+				<hr>
+				<div ng-click="vm.editDatosClinicos(seguimiento.id)" data-toggle="modal" data-target="#edit-datos-clinicos">
+					<div class="row"><!-- Datos Clinicos -->
+						<div class="col-lg-12">
+							<div class="row mb-1">
+								<label class="col-form-label form-control">{{seguimiento.datos_clinicos.tabaco}}</label>
+							</div>
+							<div class="row mb-1">
+								<label class="col-lg-5 col-form-label form-control">{{seguimiento.datos_clinicos.peso}}</label>
+								<label class="offset-lg-2 col-lg-5 col-form-label form-control">{{seguimiento.datos_clinicos.imc}}</label>
+							</div>
+							<div class="row mb-1">
+								<label class="col-form-label form-control">{{seguimiento.datos_clinicos.tension_arterial}}</label>
+							</div>				
+							<div class="row mb-1">
+								<label class="col-form-label form-control">{{seguimiento.datos_clinicos.perimetro_cintura}}</label>
+							</div>
+							<div class="row mb-1">
+								<label class="col-form-label form-control">{{seguimiento.datos_clinicos.examen_pies}}</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="" ng-click="vm.editDatosLaboratorio(seguimiento.id)" data-toggle="modal" data-target="#edit-datos-laboratorio">
+					<div class="row"><!-- Datos de Laboratorio  -->
+						<div class="col">
+							<div class="row mb-1">
+								<label class="col-lg-5 col-form-label form-control">{{seguimiento.datos_laboratorio.glucemia}}</label>
+								<label class="offset-lg-2 col-lg-5 col-form-label form-control">{{seguimiento.datos_laboratorio.hba1c}}</label>
+							</div>
+							<div class="row mb-1">					
+								<label class="col-lg-3 col-form-label form-control">{{seguimiento.datos_laboratorio.got}}</label>
+								<label class="offset-lg-1 col-lg-3 col-form-label form-control">{{seguimiento.datos_laboratorio.gpt}}</label>
+								<label class="offset-lg-1 col-lg-4 col-form-label form-control">{{seguimiento.datos_laboratorio.fal}}</label>
+							</div>
+							<div class="row mb-1">
+								<label class="col-form-label form-control">{{seguimiento.datos_laboratorio.colesterol_total}}</label>
+							</div>
+							<div class="row mb-1">
+								<label class="col-lg-3 col-form-label form-control">{{seguimiento.datos_laboratorio.hdl}}</label>
+								<label class="offset-lg-1 col-lg-3 col-form-label form-control">{{seguimiento.datos_laboratorio.ldl}}</label>
+								<label class="offset-lg-1 col-lg-4 col-form-label form-control">{{seguimiento.datos_laboratorio.trigliceridos}}</label>
+							</div>
+							<div class="row mb-1">
+								<label class="col-form-label form-control">{{seguimiento.datos_laboratorio.clearence_de_creatinina}}</label>
+							</div>
+							<div class="row mb-1">
+								<label class="col-lg-5 col-form-label form-control">{{seguimiento.datos_laboratorio.creatinina}}</label>
+								<label class="offset-lg-2 col-lg-5 col-form-label form-control">{{seguimiento.datos_laboratorio.estadio}}</label>
+							</div>
+							<div class="row mb-1">
+								<label class="col-lg-4 col-form-label form-control">{{seguimiento.datos_laboratorio.proteinuria}}</label>
+								<label class="offset-lg-1 col-lg-7 col-form-label form-control">{{seguimiento.datos_laboratorio.creatininuria}}</label>
+							</div>
+							<div class="row mb-1">
+								<label class="col-lg-6 col-form-label form-control" ng-if="seguimiento.datos_laboratorio.microalbuminuria < 30"></label>
+								<label class="col-lg-6 col-form-label form-control" ng-if="seguimiento.datos_laboratorio.microalbuminuria >= 30 && seguimiento.datos_laboratorio.microalbuminuria <= 300">30 a 300</label>
+								<label class="col-lg-6 col-form-label form-control" ng-if="seguimiento.datos_laboratorio.microalbuminuria > 300">&#62 a 300</label>
+								<label type="text" min="30" class="offset-lg-1 col-lg-5 col-form-label form-control" id="txt_laboratorio_microalbuminuria">{{seguimiento.datos_laboratorio.microalbuminuria}}</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div ng-click="vm.editMedicamentos(seguimiento.id)" data-toggle="modal" data-target="#edit-datos-medicamentos">
+					<div class="row"><!-- Medicamentos -->
+						<div class="col">
+							<div class="row mb-1">
+								<label class="col-form-label form-control">{{seguimiento.medicamentos.insulina_nph}}</label>
+							</div>
+							<div class="row mb-1">
+								<label class="col-form-label form-control">{{seguimiento.medicamentos.insulina_rapida}}</label>
+							</div>
+							<div class="row mb-1">
+								<label class="col-form-label form-control">{{seguimiento.medicamentos.metformina}}</label>
+							</div>
+							<div class="row mb-1">
+								<label class="col-form-label form-control">{{seguimiento.medicamentos.glibenclamida}}</label>
+							</div>
+							<div class="row mb-1">
+								<label class="col-form-label form-control">{{seguimiento.medicamentos.enalapril}}</label>
+							</div>
+							<div class="row mb-1">
+								<label class="col-form-label form-control">{{seguimiento.medicamentos.atenolol}}</label>
+							</div>
+							<div class="row mb-1">
+								<label class="col-form-label form-control">{{seguimiento.medicamentos.furosemida}}</label>
+							</div>
+							<div class="row mb-1">
+								<label class="col-form-label form-control">{{seguimiento.medicamentos.hidroclorotiazida}}</label>
+							</div>
+							<div class="row mb-1">
+								<label class="col-form-label form-control">{{seguimiento.medicamentos.aas}}</label>
+							</div>
+							<div class="row mb-1">
+								<label class="col-form-label form-control">{{seguimiento.medicamentos.simvastatina}}</label>
+							</div>
+							<div class="row mb-1">
+								<label class="col-form-label form-control">{{seguimiento.medicamentos.fenofibrato}}</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--End Second Column -->			
+		</div>
+	</div>
+
+</div>
+
+<!-- Modal Edit Seguimiento -->
+<div class="modal fade" id="edit-seguimiento" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel">SEGUIMIENTO</h4>
+				<button type="button" class="close" data-dismiss="modal" title="Cerrar" ng-click="vm.cancelEditSeguimiento()">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<form name="editSeguimiento" role="form">
+				<div class="modal-body">
+					<input type="hidden" class="form-control" ng-model="vm.seguimiento.id" />
+					
+					<div class="form-group row">
+							<label class="col-lg-7 col-form-label" for="txt_seguimientos_fecha">FECHA</label>
+							<input class="col-lg-4 form-control" id="txt_seguimientos_fecha" type="date" ng-model="vm.seguimiento.fecha">
+					</div>
+					<hr>
+					<div class="form-group row">
+							<div class="col-lg-7">ADHERENCIA AL TRATAMIENTO</div>
+							<div class="col-lg-2">
+								<div class="form-check">
+									<input class="form-check-input" type="radio" id="chk_seguimientos_adherencia_al_tratamiento_false" 
+										name="chk_seguimientos_adherencia_al_tratamiento" value="0"
+										ng-model="vm.seguimiento.adherencia_al_tratamiento">
+									<label class="form-check-label" for="chk_seguimientos_adherencia_al_tratamiento_false">NO</label>
+								</div>
+							</div>
+							<div class="col-lg-2">
+								<div class="form-check">
+									<input class="form-check-input" type="radio" id="chk_seguimientos_adherencia_al_tratamiento_true" 
+										name="chk_seguimientos_adherencia_al_tratamiento" value="1"
+										ng-model="vm.seguimiento.adherencia_al_tratamiento">
+									<label class="form-check-label" for="chk_seguimientos_adherencia_al_tratamiento_true">SI</label>
+								</div>
+							</div>
+					</div>
+					<hr>
+					<div class="form-group row">
+						<div class="col-lg-7">ECG</div>
+						<div class="col-lg-2">			
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="rad_seguimientos_ecg" id="rad_seguimientos_ecg_false" 
+									ng-model="vm.seguimiento.ecg" value="0">
+								<label class="form-check-label" for="rad_seguimientos_ecg_false">NO</label>
+							</div>
+						</div>
+						<div class="col-lg-2">
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="rad_seguimientos_ecg" id="rad_seguimientos_ecg_true" 
+									ng-model="vm.seguimiento.ecg" value="1">
+								<label class="form-check-label" for="rad_seguimientos_ecg_true">SI</label>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="form-group row">
+						<label class="col-lg-7 col-form-label">RIESGO CARDIOVASCULAR</label>
+						<select class="col-lg-4 form-control form-control-sm" id="sel_seguimientos_riesgo_cardiovascular" ng-model="vm.seguimiento.riesgo_cardiovascular">
+							<option	value="{{nivel.id}}" ng-repeat="nivel in vm.array_nivel_de_riesgo_cardiovascular_global" ng-selected="seguimiento.riesgo_cardiovascular == nivel.id">
+								{{nivel.intervalo}}
+							</option>
+						</select>
+					</div>
+					<hr>
+					<div class="form-group row">
+						<div class="col-lg-7">AUTOMONITOREO</div>
+						<div class="col-lg-2">			
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="rad_seguimientos_automonitoreo" id="rad_seguimientos_automonitoreo_false" value="0"
+									ng-model="vm.seguimiento.automonitoreo">
+								<label class="form-check-label" for="rad_seguimientos_automonitoreo_false">NO</label>
+							</div>
+						</div>
+						<div class="col-lg-2">
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="rad_seguimientos_automonitoreo" id="rad_seguimientos_automonitoreo_true" value="1"
+									ng-model="seguimiento.automonitoreo">
+								<label class="form-check-label" for="rad_seguimientos_automonitoreo_true">SI</label>
+							</div>
+						</div>
+					</div>
+				</div><!-- Modal Body -->
+				<div class="modal-footer">
+					<label ng-show="editSeguimiento.$invalid">Complete los campos requeridos</label>
+					<button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.cancelEditSeguimiento()">Cerrar</button>
+					<button type="submit" class="btn btn-primary" ng-disabled="editSeguimiento.$invalid" ng-click="vm.saveEditSeguimiento()">Guardar</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Modal Edit Datos Clinicos -->
+<div class="modal fade" id="edit-datos-clinicos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel">DATOS CLINICOS</h4>
+				<button type="button" class="close" data-dismiss="modal" title="Cerrar" ng-click="vm.cancelEditDatosClinicos()">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<form name="editDatosClinicos" role="form">
+				<div class="modal-body">
+					<input type="hidden" class="form-control" ng-model="vm.datos_clinicos.id" />
+
+					<div class="form-group row">
+						<label class="col-lg-7 col-form-label" for="txt_seguimiento_datos_clinicos_tabaco">TABACO</label>
+						<input class="col-lg-4  form-control" type="number" id="txt_seguimiento_datos_clinicos_tabaco" ng-model="vm.datos_clinicos.tabaco">
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-7 col-form-label" for="txt_seguimiento_datos_clinicos_peso">PESO</label>
+						<input class="col-lg-4 form-control" type="number" id="txt_seguimiento_datos_clinicos_peso" ng-model="vm.datos_clinicos.peso">
+					</div>
+					<div class="form-group row">
+						<label class="col-lg-7 col-form-label" for="txt_seguimiento_datos_clinicos_imc">I.M.C.</label>
+						<input class="col-lg-4 form-control" type="number"  id="txt_seguimiento_datos_clinicos_imc" ng-model="vm.datos_clinicos.imc">
+					</div>
+
+					<div class="form-group row">
+						<label class="col-lg-7 col-form-label" for="txt_seguimiento_datos_clinicos_tension_arterial">TENSION ARTERIAL</label>
+						<input class="col-lg-4 form-control" type="number" id="txt_seguimiento_datos_clinicos_tension_arterial" ng-model="vm.datos_clinicos.tension_arterial">
+					</div>
+					
+					<div class="form-group row">
+						<label class="col-lg-7 col-form-label" for="txt_seguimiento_datos_clinicos_perimetro_cintura">PERIMETRO CINTURA</label>
+						<input class="col-lg-4 form-control" type="number" id="txt_seguimiento_datos_clinicos_perimetro_cintura" ng-model="vm.datos_clinicos.perimetro_cintura">
+					</div>
+					<div class="form-group row">
+						<label class="col-lg-7 col-form-label" for="txt_seguimiento_datos_clinicos_examen_pies">EXAMEN PIES</label>
+						<input class="col-lg-4 form-control" type="number" id="txt_seguimiento_datos_clinicos_examen_pies" ng-model="vm.datos_clinicos.examen_pies">
+					</div>
+					
+				</div>				
+				<!-- Modal Body -->
+				<div class="modal-footer">
+					<label ng-show="editDatosClinicos.$invalid">Complete los campos requeridos</label>
+					<button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.cancelEditDatosClinicos()">Cerrar</button>
+					<button type="submit" class="btn btn-primary" ng-disabled="editDatosClinicos.$invalid" ng-click="vm.saveEditDatosClinicos()">Guardar</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Modal Edit Datos Laboratorio -->
+<div class="modal fade" id="edit-datos-laboratorio" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="myModalLabel">DATOS DE LABORATORIO</h5>
+				<button type="button" class="close" data-dismiss="modal" title="Cerrar" ng-click="vm.cancelEditDatosLaboratorio()">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<form name="editDatosLaboratorio" role="form">
+				<div class="modal-body">
+				
+					<input type="hidden" class="form-control" ng-model="vm.datos_laboratorio.id" />
+					
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="input-group-text" for="txt_seguimiento_datos_laboratorio_glucemia">
+											<span class="col-lg-12">GLUCEMIA</span>
+										</label>
+									</div>
+									<input class="form-control" type="number" id="txt_seguimiento_datos_laboratorio_glucemia" ng-model="vm.datos_laboratorio.glucemia">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="input-group-text" for="txt_seguimiento_datos_laboratorio_hb1a1c">
+											<span class="col-lg-12">Hb1A1c</span>
+										</label>
+									</div>
+									<input class="form-control" type="number" id="txt_seguimiento_datos_laboratorio_hb1a1c" ng-model="vm.datos_laboratorio.hba1c">
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="input-group-text" for="txt_seguimiento_datos_laboratorio_got">
+											<span class="col-lg-12">GOT</span>
+										</label>
+									</div>
+									<input class="form-control" type="number" id="txt_seguimiento_datos_laboratorio_got" ng-model="vm.datos_laboratorio.got">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="input-group-text" for="txt_seguimiento_datos_laboratorio_gpt">
+											<span class="col-lg-12">GPT</span>
+										</label>
+									</div>
+									<input class="form-control" type="number" id="txt_seguimiento_datos_laboratorio_gpt" ng-model="vm.datos_laboratorio.gpt">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<label class="input-group-text" for="txt_seguimiento_datos_laboratorio_fal">FAL</label>
+							</div>
+							<input class="form-control" type="number" id="txt_seguimiento_datos_laboratorio_fal" ng-model="vm.datos_laboratorio.fal">
+						</div>						
+					</div>
+
+					<div class="form-group">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<label class="input-group-text" for="txt_seguimiento_colesterol_total">
+									<span class="col-lg-12">COLESTEROL TOTAL</span>
+								</label>
+							</div>
+							<input class="form-control" type="number" id="txt_seguimiento_colesterol_total" ng-model="vm.datos_laboratorio.colesterol_total">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<label class="input-group-text" for="txt_seguimiento_datos_laboratorio_trigliceridos">
+									<span class="col-lg-12">TRIGLICERIDOS</span>
+								</label>
+							</div>
+							<input class="form-control" type="number" id="txt_seguimiento_datos_laboratorio_trigliceridos" ng-model="vm.datos_laboratorio.trigliceridos">
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="input-group-text" for="txt_seguimiento_datos_laboratorio_hdl">
+											<span class="col-lg-12">HDL</span>
+										</label>
+									</div>
+									<input class="form-control" type="number" id="txt_seguimiento_datos_laboratorio_hdl" ng-model="vm.datos_laboratorio.hdl">
+								</div>
+							</div>
+						</div>					
+						<div class="col-lg-6">
+							<div class="form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="input-group-text" for="txt_seguimiento_datos_laboratorio_ldl">
+											<span class="col-lg-12">LDL</span>
+										</label>
+									</div>
+									<input class="form-control" type="number" id="txt_seguimiento_datos_laboratorio_ldl" ng-model="vm.datos_laboratorio.ldl">
+								</div>
+							</div>
+						</div>
+					</div>
+										
+					<div class="form-group">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<label class="input-group-text" for="txt_seguimiento_datos_laboratorio_clearence_de_creatinina">
+									<span class="col-lg-12">CLEARENCE DE CREATININA</span>
+								</label>
+							</div>
+							<input class="form-control" type="number" id="txt_seguimiento_datos_laboratorio_clearence_de_creatinina" ng-model="vm.datos_laboratorio.clearence_de_creatinina">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<label class="input-group-text" for="txt_seguimiento_datos_laboratorio_creatinina">
+									<span class="col-lg-12">CREATININA</span>
+								</label>
+							</div>
+							<input class="form-control" type="number" id="txt_seguimiento_datos_laboratorio_creatinina" ng-model="vm.datos_laboratorio.creatinina">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<label class="input-group-text" for="txt_seguimiento_datos_laboratorio_estadio">
+									<span class="col-lg-12">ESTADIO</span>
+								</label>
+							</div>
+							<input class="form-control" type="number" id="txt_seguimiento_datos_laboratorio_estadio" ng-model="vm.datos_laboratorio.estadio">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<label class="input-group-text" for="txt_seguimiento_datos_laboratorio_proteinuria">
+									<span class="col-lg-12">PROTEINURIA</span>
+								</label>
+							</div>
+							<input class="form-control text-right" type="number" id="txt_seguimiento_datos_laboratorio_proteinuria" ng-model="vm.datos_laboratorio.proteinuria">
+						</div>						
+					</div>
+					
+					<div class="form-group">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<label class="input-group-text" for="txt_seguimiento_datos_laboratorio_creatininuria">									
+									<span class="col-lg-12">CREATININURIA</span>
+								</label>
+							</div>
+							<input class="form-control" type="number" id="txt_seguimiento_datos_laboratorio_creatininuria" ng-model="vm.datos_laboratorio.creatininuria">
+						</div>
+					</div>
+						
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="input-group mb-3">
+							  	<div class="input-group-prepend">
+							    	<label class="input-group-text" for="txt_datos_laboratorio_microalbuminuria">MICROALBUMINURIA</label>
+							  	</div>
+							  	<label class="form-control" ng-if="vm.datos_laboratorio.microalbuminuria < 30">menor a 30</label>
+							  	<label class="form-control" ng-if="vm.datos_laboratorio.microalbuminuria >= 30 && vm.datos_laboratorio.microalbuminuria <= 300">de 30 a 300</label>
+							  	<label class="form-control" ng-if="vm.datos_laboratorio.microalbuminuria > 300">mayor a 300</label>
+									<input type="number" min="0" class="form-control" id="txt_datos_laboratorio_microalbuminuria" ng-model="vm.datos_laboratorio.microalbuminuria">
+							</div>
+						</div>	
+					</div>
+
+				</div>				
+				<!-- Modal Body -->
+				<div class="modal-footer">
+					<label ng-show="editDatosClinicos.$invalid">Complete los campos requeridos</label>
+					<button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.cancelEditDatosClinicos()">Cerrar</button>
+					<button type="submit" class="btn btn-primary" ng-disabled="editDatosClinicos.$invalid" ng-click="vm.saveEditDatosClinicos()">Guardar</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Modal Edit Datos Laboratorio -->
+<div class="modal fade" id="edit-datos-medicamentos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="myModalLabel">MEDICAMENTOS</h5>
+				<button type="button" class="close" data-dismiss="modal" title="Cerrar" ng-click="vm.cancelEditMedicamentos()">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<form name="editMedicamentos" role="form">
+				<div class="modal-body">
+				
+					<input type="hidden" class="form-control" ng-model="vm.medicamentos.id" />
+										
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="input-group-text" for="txt_medicamentos_insulina_nph">
+											<span class="col-lg-12">INSULINA NPH</span>
+										</label>
+									</div>
+									<input class="form-control" type="number" id="txt_medicamentos_insulina_nph" ng-model="vm.medicamentos.insulina_nph">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="input-group-text" for="txt_medicamentos_insulina_rapida">
+											<span class="col-lg-12">INSULINA RAPIDA</span>
+										</label>
+									</div>
+									<input class="form-control" type="number" id="txt_medicamentos_insulina_rapida" ng-model="vm.medicamentos.insulina_rapida">
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="input-group-text" for="txt_medicamentos_metformina">
+											<span class="col-lg-12">METFORMINA</span>
+										</label>
+									</div>
+									<input class="form-control" type="number" id="txt_medicamentos_metformina" ng-model="vm.medicamentos.metformina">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="input-group-text" for="txt_medicamentos_glibenclamida">
+											<span class="col-lg-12">GLIBENCLAMIDA</span>
+										</label>
+									</div>
+									<input class="form-control" type="number" id="txt_medicamentos_glibenclamida" ng-model="vm.medicamentos.glibenclamida">
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="input-group-text" for="txt_medicamentos_atenolol">
+											<span class="col-lg-12">ATENOLOL</span>
+										</label>
+									</div>
+									<input class="form-control" type="number" id="txt_medicamentos_atenolol" ng-model="vm.medicamentos.atenolol">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="input-group-text" for="txt_medicamentos_enalapril">
+											<span class="col-lg-12">ENALAPRIL</span>
+										</label>
+									</div>
+									<input class="form-control" type="number" id="txt_medicamentos_enalapril" ng-model="vm.medicamentos.enalapril">
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="input-group-text" for="txt_medicamentos_forusemida">
+											<span class="col-lg-12">FUROSEMIDA</span>
+										</label>
+									</div>
+									<input class="form-control" type="number" id="txt_medicamentos_forusemida" ng-model="vm.medicamentos.forusemida">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="input-group-text" for="txt_medicamentos_hidroclorotiazida">
+											<span class="col-lg-12">HIDROCLOROTIAZIDA</span>
+										</label>
+									</div>
+									<input class="form-control" type="number" id="txt_medicamentos_hidroclorotiazida" ng-model="vm.medicamentos.hidroclorotiazida">
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="input-group-text" for="txt_medicamentos_aas">
+											<span class="col-lg-12">AAS</span>
+										</label>
+									</div>
+									<input class="form-control" type="number" id="txt_medicamentos_aas" ng-model="vm.medicamentos.aas">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<label class="input-group-text" for="txt_medicamentos_simvastatina">
+											<span class="col-lg-12">SIMVASTATINA</span>
+										</label>
+									</div>
+									<input class="form-control" type="number" id="txt_medicamentos_simvastatina" ng-model="vm.medicamentos.simvastatina">
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<label class="input-group-text" for="txt_medicamentos_fenofibrato">
+									<span class="col-lg-12">FENOFIBRATO</span>
+								</label>
+							</div>
+							<input class="form-control" type="number" id="txt_medicamentos_fenofibrato" ng-model="vm.medicamentos.fenofibrato">
+						</div>
+					</div>
+	
+				</div>				
+				<!-- Modal Body -->
+				<div class="modal-footer">
+					<label ng-show="editMedicamentos.$invalid">Complete los campos requeridos</label>
+					<button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.cancelEditMedicamentos()">Cerrar</button>
+					<button type="submit" class="btn btn-primary" ng-disabled="editDatosClinicos.$invalid" ng-click="vm.saveEditMedicamentos()">Guardar</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+	

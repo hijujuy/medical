@@ -1,0 +1,402 @@
+<div class="card">
+<div class="card-header">
+		<div class="col-lg-12 h5">CONTROLES CLINICOS</div>	
+</div>
+
+<div class="card-body">
+
+<div class="row mt-2">
+	
+	
+	<div class="col-lg-10">
+
+		<div class="row mb-1">
+		
+			<div class="col-lg-4">
+				<div class="card">
+					<div class="card-body">
+						<div class="row">
+							<h5>ODONTOLOGIA</h5>
+						</div>
+						<div class="form-check mb-1">
+							<input class="form-check-input" type="checkbox" id="chk_odontologia_control_odontologico"
+								ng-model="vm.odontologia.control_odontologico">
+							<label class="form-check-label" for="chk_odontologia_control_odontologico">CONTROL ODONTOLOGICO</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="chk_odontologia_enfermedad_periodontal"
+								ng-model="vm.odontologia.enfermedad_periodontal"> 
+							<label class="form-check-label" for="chk_odontologia_enfermedad_periodontal"> ENFERMEDAD PERIODONTAL</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="chk_odontologia_flemones"
+								ng-model="vm.odontologia.flemones" > 
+							<label class="form-check-label" for="chk_odontologia_flemones">FLEMONES</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-body">
+						<div class="row">
+							<h5>PSICOLOGIA</h5>
+						</div>
+						<div class="form-check mb-1">
+							<input class="form-check-input" type="checkbox" id="chk_realizo_entrevista"
+								ng-model="vm.psicologia.realizo_entrevista"> 
+							<label class="form-check-label" for="chk_realizo_entrevista">¿REALIZO ENTREVISTA?</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="chk_asiste_a_terapia"
+								ng-model="vm.psicologia.asiste_a_terapia"> 
+							<label class="form-check-label" for="chk_asiste_a_terapia">¿ASISTE A TERAPIA?</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="card">
+					<div class="card-body">
+						<div class="row">
+							<h5>ENFERMERIA</h5>
+						</div>
+						<div class="form-check mb-1">
+							<input class="form-check-input" type="checkbox" id="chk_consejeria" 
+								ng-model="vm.enfermeria.consejeria"> 
+							<label class="form-check-label" for="chk_consejeria">CONSEJERIA</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="chk_curaciones"
+								ng-model="vm.enfermeria.curaciones"> 
+							<label class="form-check-label" for="chk_curaciones">CURACIONES</label>
+						</div>
+					</div>
+				</div>
+			</div>
+				
+		</div>
+
+		<div class="row mb-1">
+			<div class="col-lg-4">
+				<div class="card">
+					<div class="card-body">
+						<div class="row">
+							<h5>OFTALMOLOGIA</h5>
+						</div>
+												
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-check mb-1">
+									<input class="form-check-input" type="checkbox" id="chk_examen_actual"
+										ng-model="vm.oftalmologia.examen_actual"> 
+									<label class="form-check-label" for="chk_examen_actual">EXAMEN ACTUAL</label>
+								</div>
+								<div class="form-check mb-1">
+									<input class="form-check-input" type="checkbox" id="chk_fondo_de_ojos"
+										ng-model="vm.oftalmologia.fondo_de_ojos"> 
+									<label class="form-check-label" for="chk_fondo_de_ojos">FONDO DE OJOS</label>
+								</div>
+								<div class="form-check mb-1">
+									<input class="form-check-input" type="checkbox" id="chk_amaurosis"
+										ng-model="vm.oftalmologia.amaurosis"> 
+									<label class="form-check-label" for="chk_amaurosis">AMAUROSIS</label>
+								</div>
+								<div class="form-check mb-1">
+									<input class="form-check-input" type="checkbox" id="chk_cataratas"
+										ng-model="vm.oftalmologia.cataratas"> 
+									<label class="form-check-label" for="chk_cataratas">CATARATAS</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" id="chk_glaucoma"
+										ng-model="vm.oftalmologia.glaucoma">
+									<label class="form-check-label" for="chk_glaucoma">GLAUCOMA</label>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="form-check mb-2">
+									<input class="form-check-input" type="checkbox" id="chk_maculopatia"
+										ng-model="vm.oftalmologia.maculopatia"> 
+									<label class="form-check-label" for="chk_maculopatia">MACULOPATIA</label>
+								</div>
+								<div class="form-check mb-2">
+									<input class="form-check-input" type="checkbox" id="chk_retinopatia"
+										ng-model="vm.oftalmologia.retinopatia"> 
+									<label class="form-check-label" for="chk_retinopatia">RETINOPATIA</label>
+								</div>
+								<div class="form-check mb-2">
+									<input class="form-check-input" type="checkbox" id="chk_proliferativa"
+										ng-model="vm.oftalmologia.proliferativa"> 
+									<label class="form-check-label" for="chk_proliferativa">PROLIFERATIVA</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" id="chk_noproliferativa"
+										ng-model="vm.oftalmologia.no_proliferativa"> 
+									<label class="form-check-label" for="chk_noproliferativa">NO PROFILERATIVA</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="col-lg-5">
+				<div class="card">
+					<div class="card-body">
+						<div class="row h5">EXAMEN FISICO</div>
+
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="form-inline">
+									<label for="txt_peso">PESO (kg)</label>
+									<input class="form-control col-lg-6 text-center" type="text" id="txt_peso"
+										ng-model="vm.examen_fisico.peso" >
+								</div>
+								<div class="form-group">
+									<label for="txt_talla">TALLA (m)</label>
+									<input class="form-control col-lg-6 text-center" type="text" id="txt_talla"
+										ng-model="vm.examen_fisico.talla" >
+								</div>								
+							</div>
+							<div class="col-lg-4">
+								<div class="form-inline">
+									<label for="txt_perimetro_cintura">PERIMETRO CINT</label>
+									<input class="form-control col-lg-6 text-center" type="text" id="txt_perimetro_cintura"
+										ng-model="vm.examen_fisico.perimetro_cintura" >
+								</div>
+								<div class="form-group">
+									<label class="" for="txt_imc">I.M.C.</label>
+									<input class="form-control col-lg-6 text-center" type="text" id="txt_imc"
+										ng-model="vm.examen_fisico.imc" >
+								</div>
+								
+							</div>
+							<div class="col-lg-4">
+								<div class="form-inline">
+									<label for="txt_ta_sist">T.A. SIST. (mmHg)</label>
+									<input class="form-control col-lg-6 text-center" type="text" id="txt_ta_sist"
+										ng-model="vm.examen_fisico.ta_sistolica" >
+								</div>
+								<div class="form-group">
+									<label for="txt_ta_diast">T.A. DIAST (mmHg)</label>
+									<input class="form-control col-lg-6 text-center" type="text" id="txt_ta_diast"
+										ng-model="vm.examen_fisico.ta_diastolica" >
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-3">
+				<div class="card">
+					<div class="card-body">
+					
+						<div class="custom-control custom-switch">
+							<input type="checkbox" class="custom-control-input" id="chk_complicaciones_agudas_diabetes"
+								ng-model="vm.complicaciones_agudas_de_diabetes.tuvo_episodios" ng-true-value="1" ng-false-value="0"
+								ng-change="vm.tuvoEpisodiosComplicacionesAgudasChange()">
+							<label class="custom-control-label" for="chk_complicaciones_agudas_diabetes">
+								<h5>COMPLICACIONES AGUDAS DE DIABETES</h5>
+							</label>
+						</div>
+						
+						<div >						
+							<p>Nro. EPISODIOS EN ULTIMO AÑO: {{vm.complicaciones_agudas_de_diabetes.cantidad_episodios_ultimo_anio}}</p>
+							<div class="form-inline">							
+								<input class="col-lg-3 form-control" type="text" id="txt_hipoglucemias_severas"
+									ng-model="vm.complicaciones_agudas_de_diabetes.hipoglucemia_severas"
+									ng-change="vm.cantidadEpisodiosChange()"
+									ng-disabled="vm.complicaciones_agudas_de_diabetes_tuvo_episodios_disabled">
+								<label class="col-lg-8 text-center" for="txt_hipoglucemias_severas">
+									HIPOGLUCEMIAS SEVERAS
+								</label>
+							</div>
+							<div class="form-inline"> 
+								<input class="col-lg-3 form-control" type="text" id="txt_cetoacidosis"
+									ng-model="vm.complicaciones_agudas_de_diabetes.cetoacidosis"
+									ng-change="vm.cantidadEpisodiosChange()"
+									ng-disabled="vm.complicaciones_agudas_de_diabetes_tuvo_episodios_disabled">
+								<label class="col-lg-8" for="txt_cetoacidosis">
+									CETOACIDOSIS
+								</label>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-2">
+				<div class="card">
+					<div class="card-body">
+
+						<div class="row h5">PIES</div>
+
+						<div class="row">
+							<div class="col">
+								<div class="form-check row">
+									<input class="form-check-input" type="checkbox" id="chk_examen_actual_pies">
+									<label class="form-check-label form-control-sm" for="chk_examen_actual_pies">EXAMEN ACTUAL</label>
+								</div>
+								<div class="form-check row">
+									<input class="form-check-input" type="checkbox" id="chk_ausencia_de_puldio_medio">
+									<label class="form-check-label form-control-sm" for="chk_ausencia_de_puldio_medio">AUSENCIA DE PULSO PEDIO</label>
+								</div>
+								<div class="form-check row">
+									<input class="form-check-input" type="checkbox" id="chk_ausencia_de_reflejos">
+									<label class="form-check-label form-control-sm" for="chk_ausencia_de_reflejos">AUSENCIA DE REFLEJOS</label>
+								</div>
+								<div class="form-check row">
+									<input class="form-check-input" type="checkbox" id="chk_alteracion_sensibilidad">
+									<label class="form-check-label form-control-sm" for="chk_alteracion_sensibilidad">ALTERACION SENSIBILIDAD</label>
+								</div>
+								<div class="form-check row">
+									<input class="form-check-input" type="checkbox" id="chk_claudicacion_interm">
+									<label class="form-check-label form-control-sm" for="chk_claudicacion_interm">CLAUDICACION INTERM.</label>
+								</div>
+								<div class="form-check row">
+									<input class="form-check-input" type="checkbox" id="chk_ulcera">
+									<label class="form-check-label form-control-sm" for="chk_ulcera">ULCERA</label>
+								</div>
+								<div class="form-check row">
+									<input class="form-check-input" type="checkbox" id="chk_amputacion">
+									<label class="form-check-label form-control-sm" for="chk_amputacion">AMPUTACION</label>
+								</div>
+								<div class="form-check row">
+									<input class="form-check-input" type="checkbox" id="chk_ecodoppler_perif">
+									<label class="form-check-label form-control-sm" for="chk_ecodoppler_perif">ECODOPPLER PERIF.</label>
+								</div>
+							</div>
+						</div>
+
+					</div>
+		</div>
+	</div>
+		
+	
+</div>
+
+<div class="row mb-2">
+										
+			<div class="col-lg-4">
+				<div class="card">
+					<div class="card-body">
+						<div class="row h5">NUTRICION</div>
+						<div class="form-check mb-1">
+							<input class="form-check-input" type="checkbox" id="chk_tiene_conocimientos_basicos"
+								ng-model="vm.nutricion.tiene_conocimientos_basicos" > 
+							<label class="form-check-label" for="chk_tiene_conocimientos_basicos">¿TIENE CONOCIMIENTOS BASICOS?</label>
+						</div>
+						<div class="form-check mb-1">
+							<input class="form-check-input" type="checkbox" id="chk_asiste_control"
+								ng-model="vm.nutricion.asiste_control" > 
+							<label class="form-check-label" for="chk_asiste_control">ASISTE A CONTROL / TALLER CON NUTRICIONISTA?</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="chk_cumple_plan_de_alimentacion"
+								ng-model="vm.nutricion.cumple_plan_de_alimentacion" > 
+							<label class="form-check-label" for="chk_cumple_plan_de_alimentacion">¿CUMPLE PLAN DE ALIMENTACINO?</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="card">
+					<div class="card-body">
+						<div class="row h5">CIRCULATORIO</div>
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-check mb-1">
+									<input class="form-check-input" type="checkbox" id="chk_act_ait"
+										ng-model="vm.circulatorio.acv_ait" >
+									<label class="form-check-label" for="chk_act_ait">ACV / AIT</label>
+								</div>
+								<div class="form-check mb-1">
+									<input class="form-check-input" type="checkbox" id="chk_aim"
+										ng-model="vm.circulatorio.aim" >
+									<label class="form-check-label" for="chk_aim">IAM</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" id="chk_angioplastia"
+										ng-model="vm.circulatorio.angioplastia_bypass" > 
+									<label class="form-check-label" for="chk_angioplastia">ANGIOPLASTIA / BY PASS</label>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="form-check mb-1">
+									<input class="form-check-input" type="checkbox" id="chk_ecg"
+										ng-model="vm.circulatorio.ecg" >
+									<label class="form-check-label" for="chk_ecg">ECG</label>
+								</div>
+								<div class="form-check mb-1">
+									<input class="form-check-input" type="checkbox" id="chk_ecodoppler"
+										ng-model="vm.circulatorio.ecodoppler" > 
+									<label class="form-check-label" for="chk_ecodoppler">ECODOPPLER</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="card">
+					<div class="card-body">
+						<div class="row h5">RENAL</div>
+						<div class="row">
+							<div class="col-lg-6">						
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" id="chk_nefropatia"
+										ng-model="vm.renal.nefropatia" ng-true-value="1" ng-false-value="0" ng-change="vm.renalNefropatiaChange()"> 
+									<label class="form-check-label" for="chk_nefropatia">NEFROPATIA</label>
+									
+									<div ng-disabled="vm.renal_nefropatia_disabled">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="rad_nefropatia_tipo" 
+											id="rad_nefropatia_tipo_clinica" value="1"
+											ng-model="vm.renal.nefropatia_tipo">
+										<label class="form-check-label" for="rad_nefropatia_tipo_clinica"> CLINICA </label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="rad_nefropatia_tipo" 
+											id="rad_nefropatia_tipo_subclinica" value="2"
+											ng-model="vm.renal.nefropatia_tipo">
+										<label class="form-check-label" for="rad_nefropatia_tipo_subclinica"> SUB CLINICA </label>
+									</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">	
+								<div class="form-check mb-1">
+									<input class="form-check-input" type="checkbox" id="chk_dialisis"
+										ng-model="vm.renal.dialisis" >
+									<label class="form-check-label" for="chk_dialisis">DIALISIS</label>
+								</div>
+								<div class="form-check mb-1">
+									<input class="form-check-input" type="checkbox" id="chk_transplante"
+										ng-model="vm.renal.transplante" > 
+									<label class="form-check-label" for="chk_transplante">TRANSPLANTE</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" id="chk_ecografia"
+										ng-model="vm.renal.ecografia" > 
+									<label class="form-check-label" for="chk_ecografia">ECOGRAFIA</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+</div>
+
+</div>
+</div>
