@@ -1,4 +1,4 @@
-angular.module('historialApp').controller('editController', [
+historialApp.controller('editController', [
 '$http','$scope','$timeout','$location','$routeParams', 
 function($http, $scope, $timeout, $location, $routeParams) {			
 	//0800-888-4747

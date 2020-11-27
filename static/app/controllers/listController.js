@@ -1,5 +1,5 @@
 
-angular.module('historialApp').controller('listController', ['$http','$location',
+historialApp.controller('listController', ['$http','$location',
 	function listController($http, $location){
 		var vm = this;
 		getPacientes().then(function(data){

@@ -5,42 +5,45 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-    	<ul class="navbar-nav mr-auto">
-	      <li class="nav-item active">
-	      	<a class="nav-link" href="" ng-click="vm.activeTemplate(0)">Paciente<span class="sr-only">(current)</span></a>
-	    	</li>
-	    	<li class="nav-item">
-        	<a class="nav-link" href="" ng-click="vm.activeTemplate(1)">Diagnosticos</a>
-      	</li>
-      	<li class="nav-item">
-        	<a class="nav-link" href="" ng-click="vm.activeTemplate(2)">Controles Clinicos</a>
-      	</li>
-      	<li class="nav-item">
-        	<a class="nav-link" href="" ng-click="vm.activeTemplate(3)">Laboratorio</a>
-      	</li>
-      	<li class="nav-item">
-        	<a class="nav-link" href="" ng-click="vm.activeTemplate(4)">Tratamiento</a>
-      	</li>
-      	<li class="nav-item">
-        	<a class="nav-link" href="" ng-click="vm.activeTemplate(5)">Seguimiento</a>
-      	</li>
-      </ul>
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="" ng-click="vm.activeTemplate(0)">Paciente<span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="" ng-click="vm.activeTemplate(1)">Diagnosticos</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="" ng-click="vm.activeTemplate(2)">Controles Clinicos</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="" ng-click="vm.activeTemplate(3)">Laboratorio</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="" ng-click="vm.activeTemplate(4)">Tratamiento</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="" ng-click="vm.activeTemplate(5)">Seguimiento</a>
+			</li>
+		</ul>
     </div>
-    <form class="offset-lg-3 form-inline my-2 my-lg-0">
-			<label class="mr-sm-2" ></label>
-			<div class="">
-				<button type="button" class="btn btn-outline-success my-2 my-sm-0" ng-click="vm.saveUpdatesRegistro()" ng-disabled="vm.save_updates_disabled">
-  				<span  ng-if="vm.estado_guardar == 1"><img src="/static/image/ok_control.png" width="20" height="20" alt="Logo"></span>
-					<span class="spinner-grow spinner-grow-sm" ng-if="vm.estado_guardar == 2"></span>
-  				<span class="spinner-border spinner-border-sm" ng-if="vm.estado_guardar == 3"></span>
-					Guardar
-				</button>
-	    	<button type="button" class="btn btn-outline-danger my-2 my-sm-0" ng-click="vm.closeHistorial()" ng-disabled="vm.close_disabled">
-	    		<span><img src="/static/image/error_control.png" width="20" height="20" alt="Logo"></span>
-	    		Cerrar
-	    	</button>
-			</div>
-		</form>
+	<form class="offset-lg-3 form-inline my-2 my-lg-0">
+		<label class="mr-sm-2"></label>
+		<div class="">
+			<button type="button" class="btn btn-outline-success my-2 my-sm-0" ng-click="vm.saveUpdatesRegistro()"
+				ng-disabled="vm.save_updates_disabled">
+				<span ng-if="vm.estado_guardar == 1"><img src="/static/image/ok_control.png" width="20" height="20"
+						alt="Logo"></span>
+				<span class="spinner-grow spinner-grow-sm" ng-if="vm.estado_guardar == 2"></span>
+				<span class="spinner-border spinner-border-sm" ng-if="vm.estado_guardar == 3"></span>
+				Guardar
+			</button>
+			<button type="button" class="btn btn-outline-danger my-2 my-sm-0" ng-click="vm.closeHistorial()"
+				ng-disabled="vm.close_disabled">
+				<span><img src="/static/image/error_control.png" width="20" height="20" alt="Logo"></span>
+				Cerrar
+			</button>
+		</div>
+	</form>
   </div>
 </nav>
 

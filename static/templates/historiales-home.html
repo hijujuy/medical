@@ -1,21 +1,51 @@
-<div >
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        	<span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="">Greyber</a>
-        			
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">        			  	
-        	<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        		<li class="nav-item">
-        			<a class="nav-link" href="#/"></a>
-        		</li>
-        	</ul>
-        	<form class="form-inline">
-                <input class="form-control mr-sm-2" ng-model="vm.login_name" type="text" placeholder="Usuario" aria-label="Search">
-                <input class="form-control mr-sm-2" ng-model="vm.login_password" type="password" placeholder="Contraseña" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" ng-click="vm.login()" type="submit">INGRESAR</button>
-            </form>
-        </div>
-    </nav>
+
+<div class="card border-secondary mb-3 mylogin" style="max-width: 20rem;">
+    <div class="card-header"><img class="mb-4" src="static/image/logo.svg" alt="logo" width="90"></div>
+    <div class="card-body">
+        <form class="form-desing">
+            <div class="form-group">
+                <label for="inputEmail">Correo electronico</label>
+                <input type="text" class="form-control" ng-model="vm.login_name" id="inputEmail">
+            </div>
+            <div class="form-group">
+                <label for="inputPassword">Clave</label>
+                <input type="password" class="form-control" ng-model="vm.login_password" id="inputPassword">
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="chkRemember">
+                <label class="form-check-label" for="chkRemember">Recordar mis datos</label>
+            </div>
+            <button type="submit" class="btn btn-primary" ng-click="vm.login()">Ingresar</button>
+        </form>
+    </div>
 </div>
+
+<!--
+<div class="row">
+    <div class="col-md-12">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="">Greyber</a>
+    
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#/"></a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" ng-model="vm.login_name" type="text" placeholder="Usuario"
+                        aria-label="Search">
+                    <input class="form-control mr-sm-2" ng-model="vm.login_password" type="password"
+                        placeholder="Contraseña" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" ng-click="vm.login()"
+                        type="submit">INGRESAR</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+</div>
+-->

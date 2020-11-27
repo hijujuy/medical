@@ -1,5 +1,4 @@
-
-angular.module('historialApp').controller('homeController', ['$location', 
+historialApp.controller('homeController', ['$location', 
 	function homeController($location){
 		var vm = this;
 		
@@ -7,7 +6,7 @@ angular.module('historialApp').controller('homeController', ['$location',
 		vm.usuarios = getUsuarios();
 		
 		vm.login = function(){
-			if (validarUsuario(vm.login_name, vm.login_password)){
+			if (validarUsuario(vm.login_name, vm.login_password)){				
 				$location.path('/list');
 			}else{
 				vm.login_name = "";
