@@ -17,8 +17,8 @@ class Paciente_model extends CI_Model
             $query = $this->db->get('paciente');
             
             if ($query->num_rows() > 0)
-            {
-                $pacientes = $query->result();
+            {   
+                $pacientes = $query->result();                
                 foreach ($pacientes as $paciente) {
                     $paciente->id = (int)$paciente->id;
                     $paciente->dni = (int)$paciente->dni;
@@ -29,6 +29,7 @@ class Paciente_model extends CI_Model
                     $paciente->localidad_id = (int)$paciente->localidad_id;
                     $paciente->departamento_id = (int)$paciente->departamento_id;
                 }
+                
                 return $pacientes;
             }
             return null;
