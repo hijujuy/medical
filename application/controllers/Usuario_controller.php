@@ -11,6 +11,17 @@ class Usuario_controller extends REST_Controller
         parent::__construct();
         $this->load->model('usuario_model', 'mymodel');
     }
+
+    public function index_get()
+    {
+        $query = $this->mymodel->get();
+
+        if (!is_null($query)) {
+            $this->response(array('users' => $query), 200);
+        } else {
+            $this->response(array('error' => 'No existen usuarios registrados ...'), 404);
+        }
+    }
     
     public function login_post()
     {        
@@ -28,20 +39,15 @@ class Usuario_controller extends REST_Controller
     {
         $email = $this->post('email');
         $password = $this->post('password');
+        $rol = $this->post('rol');
         
-        if ($this->mymodel->create($email, $password))
+        if ($this->mymodel->create($email, $password, $rol))
         {
-            $this->response(array('ok' => TRUE), 200);
+            $this->response(array('ok' => 'Usuario creado exitosamente.'), 200);
         }
         else
         {
             $this->response(array('message' => 'Email o Contraseña incorrectos'), 400);
         }
     }
-
-    public function change_password_post()
-    {
-
-    }
-
 }

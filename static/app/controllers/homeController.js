@@ -1,26 +1,12 @@
 historialApp.controller('homeController', ['$location', '$cookieStore', 'homeService',
 	function homeController($location, $cookieStore, homeService){
 		var vm = this;
-		let ok = 200;
-		let createOk = 201;
-		let forbidden = 400;
-		let unauthorized = 401;
+		var ok = 200;
+		var createOk = 201;
+		var forbidden = 400;
+		var unauthorized = 401;
 		$('#alert-login').hide();
-		
-		vm.create = function() {
-			homeService.create(vm.login_name, vm.login_password).then(
-				function(response) {
-					if (response.data.ok) {
-						setFocusInputData('Usuario creado exitosamente');
-						$location.path('/');	
-					}
-					if (response.status == forbidden) {
-						setFocusInputData(response.data.message);
-					}
-				}
-			);
-		};
-
+				
 		vm.login = function(){
 			homeService.login(vm.login_name, vm.login_password).then(
 				function(response){
@@ -29,7 +15,6 @@ historialApp.controller('homeController', ['$location', '$cookieStore', 'homeSer
 						$cookieStore.put('id', user.id);
 						$cookieStore.put('user', user.email);
 						$cookieStore.put('rol', user.rol);
-						vm.user = $cookieStore.get('user');
 						$location.path('/list');
 					}
 					if (response.status == unauthorized){

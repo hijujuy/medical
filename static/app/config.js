@@ -23,6 +23,16 @@ historialApp.
 					controllerAs: 'vm',
 					templateUrl: 'static/templates/historiales-edit.html'
 				}).
+				when('/users', {
+					controller: 'userController',
+					controllerAs: 'vm',
+					templateUrl: 'static/templates/historiales-user.html'
+				}).
+				when('/new_user', {
+					controller: 'userController',
+					controllerAs: 'vm',
+					templateUrl: 'static/templates/historiales-new-user.html'
+				}).
 				otherwise('/');
 		}
 	]);

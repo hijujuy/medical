@@ -4,14 +4,18 @@
 			<div class="card">
 				<div class="card-header">
 					<div class="row">
-						<div class="col-lg-8">
+						<div class="col-lg-6">
 							<div class="form-inline">						    
 							   	<!-- <img class="mr-2" src="icons/magnifying-glass-8x.png" width="15" height="15" alt="Logo"> -->			
 							    <label class="mr-2 h5" for="txt_paciente_buscado">BUSCAR HISTORIAL</label>
 								<input class="form-control" id="txt_paciente_buscado" type="text" placeholder="Nombre del paciente" ng-model="vm.paciente_buscado">			    	
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-lg-6 text-right">
+							<a id="btn-user" href="#/users" class="btn btn-outline-primary" role="button" aria-pressed="true" >
+								<img class="mr-2" src="/static/image/new_user.png" width="25" height="25" alt="Logo">
+								USUARIOS
+							</a>
 							<a href="#/new" class="btn btn-outline-success" role="button" aria-pressed="true" >
 								<img class="mr-2" src="/static/image/nuevo_historial.png" width="25" height="25" alt="Logo">
 								NUEVO HISTORIAL

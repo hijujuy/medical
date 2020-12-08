@@ -45,6 +45,25 @@ class Paciente_controller extends REST_Controller
             $this->response(array('error' => 'Paciente no encontrado'), 404);
         }
     }
+
+    public function findall_get($id_user = null)
+    {
+        if (is_null($id_user))
+        {
+            $this->response(array("error" => "Debe proporcionar valor ID del medico como parametro"), 400);
+        }
+        
+        $pacientes = $this->mymodel->getAll($id_user);
+                
+        if (!is_null($pacientes))
+        {
+            $this->response(array('pacientes' => $pacientes) , 200);
+        }
+        else
+        {
+            $this->response(array('error' => 'Pacientes no encontrados para el medico'), 404);
+        }
+    }
     
     public function index_post()
     {

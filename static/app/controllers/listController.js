@@ -1,8 +1,13 @@
 
-historialApp.controller('listController', ['$http','$location',
-	function listController($http, $location){
+historialApp.controller('listController', ['$http','$location', '$cookieStore',
+	function listController($http, $location, $cookieStore){
 		var vm = this;
-		getPacientes().then(function(data){
+		$('#btn-user').hide();
+		if ($cookieStore.get('rol') == 'admin') {
+			$('#btn-user').show();
+		}
+
+		getPacientes().then(function(data){			
 			vm.pacientes = data;
 		});		
 		
@@ -10,12 +15,16 @@ historialApp.controller('listController', ['$http','$location',
 			$location.path('/edit/'+id);
 		};
 		
-		vm.exit = function(){			
+		vm.exit = function(){
+			$cookieStore.remove('id', user.id);
+			$cookieStore.remove('user', user.email);
+			$cookieStore.remove('rol', user.rol);
 			$location.path('/');
 		};
 		
-		function getPacientes(){			
-			return $http({url:'/index.php/pacientes', method:'GET'}).then(
+		function getPacientes(){
+			urlpacientes = '/index.php/pacientes/'+$cookieStore.get('id');
+			return $http({url: urlpacientes, method:'GET'}).then(
 				function(response){
 					return response.data.pacientes;
 				},
@@ -24,5 +33,4 @@ historialApp.controller('listController', ['$http','$location',
 				}
 			);
 		};	
-			
 }]); 

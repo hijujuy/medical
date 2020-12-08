@@ -1,11 +1,9 @@
-historialApp.service('homeService', ['$http', 
+historialApp.service('userService', ['$http', 
 	function homeService($http) {
-		this.login = function(username, password) {
-			datos = { email: username, password: password};
+		this.users = function() {
 			return $http({
 				url:'/index.php/usuario', 
-				method:'POST',
-				data: datos
+				method:'GET'
 			}).then(
 				function(data){
 					return data;
@@ -16,8 +14,8 @@ historialApp.service('homeService', ['$http',
 			);
 		};
 
-		this.create = function(username, password) {
-			datos = { email: username, password: password};
+		this.create = function(username, password, rol) {
+			datos = { email: username, password: password, rol: rol };
 			return $http({
 				url: '/index.php/create_user',
 				method: 'POST',

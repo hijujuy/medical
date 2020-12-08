@@ -11,6 +11,17 @@ class Usuario_model extends CI_Model
         $this->load->library('encryption');
     }
 
+    public function get()
+    {
+        $query = $this->db->get($this->mytable);
+        
+        if (!is_null($query)){            
+            return $query->result();
+        }else{
+            return NULL;
+        }
+    }
+
     public function login($email, $password)
     {
         $response = NULL;
@@ -26,19 +37,17 @@ class Usuario_model extends CI_Model
                 $response = $query->row();
             }
         }
-        return $response;
-        
+        return $response;        
     }
 
-    public function create($email, $password)
+    public function create($email, $password, $rol)
     {
         $password = $this->encryption->encrypt($password);
-        $datos = array('email' => $email, 'password' => $password, 'rol' => 'medico');        
-        $this->db->insert($this->mytable, $datos);        
-        if ($this->db->affected_rows() == 1) {
+        $datos = array('email' => $email, 'password' => $password, 'rol' => $rol);
+        if ($this->db->insert($this->mytable, $datos)) {
             return TRUE;
         } else {
-            return null;
+            return FALSE;
         }
     }
 

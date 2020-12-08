@@ -54,9 +54,9 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['templates/(:any)'] = "templates/view/$1";
 
+$route['usuario']['get'] = 'usuario_controller/index';
 $route['usuario']['post'] = 'usuario_controller/login';
 $route['create_user']['post'] = 'usuario_controller/create';
-$route['password']['post'] = 'usuario_controller/change_password';
 
 
 $route['historial/(:num)']['get'] = 'historial_controller/index/$1';
@@ -64,7 +64,7 @@ $route['historial']['post'] = 'historial_controller/create';
 $route['historial/(:num)']['post'] = 'historial_controller/update/$1';
 
 $route['pacientes']['get'] = 'paciente_controller/index';
-$route['pacientes/(:num)']['get'] = 'paciente_controller/find/$1';
+$route['pacientes/(:num)']['get'] = 'paciente_controller/findall/$1';
 $route['pacientes']['post'] = 'paciente_controller/index';
 $route['pacientes/(:num)']['post'] = 'paciente_controller/update/$1';
 
