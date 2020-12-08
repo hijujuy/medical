@@ -12,21 +12,36 @@ class Usuario_controller extends REST_Controller
         $this->load->model('usuario_model', 'mymodel');
     }
     
-    public function index_post()
+    public function login_post()
     {        
         $email = $this->post('email');
         $password = $this->post('password');
-
         $user = $this->mymodel->login($email, $password);
-
-        if ($user)
-        {
+        if ($user) {
             $this->response(array('user' => $user), 200);
+        } else{
+            $this->response(array('message' => 'Usuario o Contraseña invalidos.'), 401);
+        }
+    }
+
+    public function create_post()
+    {
+        $email = $this->post('email');
+        $password = $this->post('password');
+        
+        if ($this->mymodel->create($email, $password))
+        {
+            $this->response(array('ok' => TRUE), 200);
         }
         else
         {
-            $this->response(array('error' => 'Usuario o contraseña invalidos ...'), 401);
+            $this->response(array('message' => 'Email o Contraseña incorrectos'), 400);
         }
+    }
+
+    public function change_password_post()
+    {
+
     }
 
 }
