@@ -17,8 +17,8 @@ class Paciente_model extends CI_Model
             $query = $this->db->get('paciente');
             
             if ($query->num_rows() > 0)
-            {   
-                $pacientes = $query->result();                
+            {
+                $pacientes = $query->result();
                 foreach ($pacientes as $paciente) {
                     $paciente->id = (int)$paciente->id;
                     $paciente->dni = (int)$paciente->dni;
@@ -29,7 +29,6 @@ class Paciente_model extends CI_Model
                     $paciente->localidad_id = (int)$paciente->localidad_id;
                     $paciente->departamento_id = (int)$paciente->departamento_id;
                 }
-                
                 return $pacientes;
             }
             return null;
@@ -50,33 +49,11 @@ class Paciente_model extends CI_Model
                 $paciente->localidad_id = (int)$paciente->localidad_id;
                 $paciente->departamento_id = (int)$paciente->departamento_id;
                 return $paciente;
-            }            
-            return null;
-        }        
-    }
-
-    public function getAll($id_user)
-    {
-        if (!is_null($id_user))
-        {
-            $query = $this->db->get_where('paciente', array('medico_id' => $id_user));
-            if ($query->num_rows() > 0)
-            {
-                $pacientes = $query->result();
-                foreach ($pacientes as $paciente) {
-                    $paciente->id = (int)$paciente->id;
-                    $paciente->dni = (int)$paciente->dni;
-                    $paciente->genero_id = (int)$paciente->genero_id;
-                    $paciente->estado_civil_id = (int)$paciente->estado_civil_id;
-                    $paciente->obra_social_id = (int)$paciente->obra_social_id;
-                    $paciente->estudio_id = (int)$paciente->estudio_id;
-                    $paciente->localidad_id = (int)$paciente->localidad_id;
-                    $paciente->departamento_id = (int)$paciente->departamento_id;
-                }                
-                return $pacientes;
             }
+            
             return null;
         }
+        
     }
         
     public function save($paciente)

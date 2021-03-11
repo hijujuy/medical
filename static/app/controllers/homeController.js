@@ -1,49 +1,38 @@
-historialApp.controller('homeController', ['$location', '$cookieStore', 'homeService',
-	function homeController($location, $cookieStore, homeService){
+
+angular.module('historialApp').controller('homeController', ['$location', 
+	function homeController($location){
 		var vm = this;
-		var ok = 200;
-		var createOk = 201;
-		var forbidden = 400;
-		var unauthorized = 401;
-		$('#alert-login').hide();
-				
+		
+		vm.usuario = 'invitado';
+		vm.usuarios = getUsuarios();
+		
 		vm.login = function(){
-			homeService.login(vm.login_name, vm.login_password).then(
-				function(response){
-					if (response.status == ok){
-						user = response.data.user;
-						$cookieStore.put('id', user.id);
-						$cookieStore.put('user', user.email);
-						$cookieStore.put('rol', user.rol);
-						$location.path('/list');
-					}
-					if (response.status == unauthorized){
-						setFocusInputData(response.data.message);
-					}					
-				}
-			);
-		};		
-
-		vm.show_pass = function() {
-			let pass = document.getElementById('password');
-			if (pass.type == 'password'){
-				pass.type = 'text';
-				$('#icon-show-pass').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
-			}else {
-				pass.type = 'password';
-				$('#icon-show-pass').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+			if (validarUsuario(vm.login_name, vm.login_password)){
+				$location.path('/list');
+			}else{
+				vm.login_name = "";
+				vm.login_password = "";
+				alert('Datos incorrectos, intente nuevamente.');				
 			}
+		};
+		
+		function validarUsuario(name, password){
+			var valido = false;
+			vm.usuarios.forEach(function(user){
+				if ((user.name == name)&&(user.password == password)){
+					valido = true;
+				}
+			});
+			
+			return valido;
 		}
-
-		function setFocusInputData(message){
-			$('#alert-login').html(message);
-			$('#alert-login').show('slow')
-			setTimeout(function () {
-				$('#alert-login').hide('slow');
-				$('#password').val('');
-				$('#email').val('');
-				$('#email').focus();
-			}, 5000);
+				
+		function getUsuarios() {
+			return usuarios = [
+				{'name':'juan', 'password':'123'},
+				{'name':'monica', 'password':'123'},
+				{'name':'luz', 'password':'456'},
+				{'name':'ivana', 'password':'789'}
+			];
 		}
-	}
-]);
+}]);

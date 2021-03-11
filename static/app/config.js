@@ -1,4 +1,4 @@
-historialApp.
+angular.module('historialApp').
 	config(['$routeProvider',
 		function ($routeProvider) {
 			$routeProvider.
@@ -22,16 +22,6 @@ historialApp.
 					controller: 'editController',
 					controllerAs: 'vm',
 					templateUrl: 'static/templates/historiales-edit.html'
-				}).
-				when('/users', {
-					controller: 'userController',
-					controllerAs: 'vm',
-					templateUrl: 'static/templates/historiales-user.html'
-				}).
-				when('/new_user', {
-					controller: 'userController',
-					controllerAs: 'vm',
-					templateUrl: 'static/templates/historiales-new-user.html'
 				}).
 				otherwise('/');
 		}

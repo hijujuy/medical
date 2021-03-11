@@ -1,5 +1,5 @@
 
-historialApp.controller('newController', ['$http','$location',
+angular.module('historialApp').controller('newController', ['$http','$location',
 	function newController($http, $location){
 		var vm = this;
 		vm.paciente = {};
