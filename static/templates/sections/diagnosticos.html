@@ -1,0 +1,294 @@
+
+		<div class="row mt-2 mb-2">
+			<div class="col-lg-4">
+				<div class="card">
+					<div class="card-body">
+
+						<div class="form-inline row">
+							<input class="form-check-input" type="checkbox" id="chk_glucemia_alterada_en_ayunas" 
+								ng-model="vm.diagnosticos.glucemia_alterada_en_ayunas">
+							<label class="form-check-label" for="chk_glucemia_alterada_en_ayunas">
+								GLUCEMIA ALTERADA EN AYUNAS </label>
+						</div>
+						<div class="form-inline row">
+							<input class="form-check-input" type="checkbox" id="chk_tolerancia_glucosa_alterada" 
+								ng-model="vm.diagnosticos.tolerancia_glucosa_alterada">
+							<label class="form-check-label" for="chk_tolerancia_glucosa_alterada">
+								TOLERANCIA A GULCOSA ALTERADA </label>
+						</div>
+						<div class="form-inline row">
+							<input class="form-check-input" type="checkbox" id="chk_diabetes" 
+								ng-model="vm.diagnosticos.diabetes" ng-change="vm.diabetesChkChange()">
+							<label class="form-check-label" for="chk_diabetes">
+								DIABETES </label>
+						</div>
+						<div class="form-inline row mt-1">
+							<label class="col-lg-6" for="txt_diabetes_tiempo_evolucion">
+								TIEMPO DE EVOL.
+							</label>
+							<input class="col-lg-2 form-control-sm" id="txt_diabetes_tiempo_evolucion" type="text" 
+								ng-model="vm.diagnosticos.diabetes_tiempo_evolucion" ng-disabled="vm.diabetes_disabled">
+						</div>
+						<div class="form-inline row mt-1">
+							<label class="col-lg-6" for="sel_diabetes_tipo">TIPO DIABETES</label>
+							<select class="form-control col-lg-6" id="sel_diabetes_tipo" 
+								ng-model="vm.diagnosticos.diabetes_tipo" 
+								ng-disabled="vm.diabetes_disabled" 
+								ng-change="vm.diabetesTipoChange()">
+								<option ng-repeat="diabetes_tipo in vm.array_diabetes_tipos" value="{{diabetes_tipo.id}}" 
+										ng-selected="vm.diagnosticos.diabetes_tipo == diabetes_tipo.id">
+									{{diabetes_tipo.descripcion}}
+								</option>
+							</select>
+						</div>
+						<div class="form-inline row mt-1">
+							<label class="col-lg-6" for="txt_diabetes_semanas_gestacion">SEM. GESTACION</label>
+							<input class="col-lg-2 form-control-sm" id="txt_diabetes_semanas_gestacion" type="text" 
+								ng-model="vm.diagnosticos.diabetes_semanas_gestacion" 
+								ng-disabled="vm.diabetes_gestacional_disabled">
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-3">
+				<div class="card mb-2">
+					<div class="card-body">
+						<div class="form-inline">
+							<input class="form-check-input" type="checkbox" id="chk_dislipemia" 
+								ng-model="vm.diagnosticos.dislipemia">
+							<label class="form-check-label" for="chk_dislipemia">DISLIPEMIA</label>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-body">
+						<div class="form-inline mt-1">
+							<input class="form-check-input" type="checkbox" id="chk_hipertension_arterial" 
+								ng-model="vm.diagnosticos.hipertension_arterial"
+								ng-change="vm.hipertensionArterialChange()">
+							<label class="form-check-label" for="chk_hipertension_arterial">
+								HIPERTENSION ARTERIAL
+							</label>
+						</div>
+						<div class="form-inline mt-1">
+								<label class="col-lg-9" for="txt_hipertension_arterial_tiempo_evolucion">
+									TIEMPO DE EVOLUC.
+								</label>
+								<input class="col-lg-3 form-control-sm" type="text" id="txt_hipertension_arterial_tiempo_evolucion"
+									ng-model="vm.diagnosticos.hipertension_arterial_tiempo_evolucion" 
+									ng-disabled="vm.hipertension_arterial_disabled">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-5">
+				<div class="card">
+					<div class="card-header">
+						<div class="col-lg-10 h5">
+							ENFERMEDADES ASOCIADAS
+						</div>
+					</div>
+					<div class="card-body" >
+						<div class="form-inline row mb-1 mt-2">							
+							<label class="col-lg-4" for="chk_enfermedad_tiroidea">ENF. TIROIDEA</label>
+															
+							<input class="col-lg-1" type="checkbox" id="chk_enfermedad_tiroidea" 
+								ng-model="vm.enfermedades_asociadas.enfermedad_tiroidea"
+								ng-change="vm.enfermedadTiroideaTipoChange()">
+							
+							<label class="col-lg-2" for="txt_enfermedad_tiroidea_tipo">CUAL</label>
+																					
+							<select class="col-lg-5 form-control" id="sel_enfermedad_tiroidea_tipo" 
+								ng-model="vm.enfermedades_asociadas.enfermedad_tiroidea_tipo" 
+								ng-disabled="vm.enfermedad_tiroidea_disabled">
+								<option ng-repeat="tiroidea_tipo in vm.array_enfermedad_tiroidea_tipos" value="{{tiroidea_tipo.id}}" 
+										ng-selected="vm.enfermedades_asociadas.enfermedad_tiroidea_tipo == tiroidea_tipo.id">
+									{{tiroidea_tipo.descripcion}}
+								</option>
+							</select>
+						
+						</div>
+						
+						<div class="form-inline row mb-1">							
+							<label class="col-lg-4" for="chk_enfermedad_reumatica">ENF. REUMATICAS</label>
+														
+							<input class="col-lg-1" type="checkbox" id="chk_enfermedad_reumatica" 
+								ng-model="vm.enfermedades_asociadas.enfermedad_reumatica"
+								ng-change="vm.enfermedadReumaticaTipoChange()">
+							
+							<label class="col-lg-2" for="txt_enfermedad_reumatica_tipo">CUAL</label>
+							
+							<select class="col-lg-5 form-control" id="sel_enfermedad_reumatica_tipo" 
+								ng-model="vm.enfermedades_asociadas.enfermedad_reumatica_tipo"
+								ng-disabled="vm.enfermedad_reumatica_disabled">
+								<option ng-repeat="reumatica_tipo in vm.array_enfermedad_reumatica_tipos" value="{{reumatica_tipo.id}}" 
+										ng-selected="vm.enfermedades_asociadas.enfermedad_reumatica_tipo == reumatica_tipo.id">
+									{{reumatica_tipo.descripcion}}
+								</option>
+							</select>
+							
+						</div>
+
+						<div class="form-inline row mb-2">							
+							<label class="col-lg-4" for="chk_enfermedad_celiaca">ENF. CELIACA</label>							
+							<input class="col-lg-1" type="checkbox" id="chk_enfermedad_celiaca" 
+								ng-model="vm.enfermedades_asociadas.enfermedad_celiaca">							
+						</div>
+
+						<div class="form-inline row">
+							<label class="col-lg-4 text-right" for="chk_tbc">T.B.C.</label>							
+							<input class="col-lg-1" id="chk_tbc" type="checkbox" 
+								ng-model="vm.enfermedades_asociadas.tbc">					
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row mb-1">
+
+			<div class="col-lg-6">
+				<div class="card">					
+					<div class="card-body">
+						
+						<div class="row">
+							<div class="h5">FACTORES DE RIESGO ASOCIADOS</div>							
+						</div>					
+						
+						<div class="row">
+							<div class="col">
+								<div class="form-inline row">
+									<input class="form-check-input" type="checkbox" id="chk_obesidad" ng-model="vm.factores_de_riesgo_asociados.obesidad">					
+									<label class="form-check-label" for="chk_obesidad">OBESIDAD</label>
+								</div>
+
+								<div class="form-inline row">
+									<input class="form-check-input" type="checkbox" id="chk_sedentarismo" ng-model="vm.factores_de_riesgo_asociados.sedentarismo">					
+									<label class="form-check-label" for="chk_sedentarismo">SEDENTARISMO</label>
+								</div>
+
+								<div class="form-inline  row">
+									<input class="form-check-input" type="checkbox" id="chk_tabaco" ng-model="vm.factores_de_riesgo_asociados.tabaco">					
+									<label class="form-check-label" for="chk_tabaco">TABACO</label>
+								</div>
+
+								<div class="form-inline  row">
+									<input class="form-check-input" type="checkbox" id="chk_alcoholismo" ng-model="vm.factores_de_riesgo_asociados.alcoholismo">					
+									<label class="form-check-label" for="chk_alcoholismo">ALCOHOLISMO</label>
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-inline  row">
+									<input class="form-check-input" type="checkbox" id="chk_anticoagulantes" 
+										ng-model="vm.factores_de_riesgo_asociados.anticoagulantes">					
+									<label class="form-check-label" for="chk_anticoagulantes">USA ANTICOAGULANTES</label>
+								</div>
+
+								<div class="form-inline  row">
+									<input class="form-check-input" type="checkbox" id="chk_corticoides" 
+										ng-model="vm.factores_de_riesgo_asociados.corticoides">					
+									<label class="form-check-label" for="chk_corticoides">USA CORTICOIDES</label>
+								</div>
+
+								<div class="form-inline  row">
+									<input class="form-check-input" type="checkbox" id="chk_anticonceptivos" 
+										ng-model="vm.factores_de_riesgo_asociados.anticonceptivos">					
+									<label class="form-check-label" for="chk_anticonceptivos">USA ANTICONTEPTIVOS</label>
+								</div>
+
+								<div class="form-inline row">
+									<input class="form-check-input" type="checkbox" id="chk_menospausia_prematura" 
+										ng-model="vm.factores_de_riesgo_asociados.menospausia_prematura">					
+									<label class="form-check-label" for="chk_menospausia_prematura">MENOSPAUSIA PREMATURA</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-6">
+
+				<div class="card">
+					<div class="card-body">
+
+						<div class="row h5">ANTECEDENTES FAMILIARES DE 1° GRADO</div>
+
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-check row">
+									<input class="form-check-input" type="checkbox" id="chk_familiar_hta"
+										ng-model="vm.antecedentes_familiares.hta">
+									<label class="form-check-label" for="chk_familiar_hta">HTA</label>
+								</div>
+
+								<div class="form-check row">
+									<input class="form-check-input" type="checkbox" id="chk_familiar_iam"
+										ng-model="vm.antecedentes_familiares.iam">
+									<label class="form-check-label" for="chk_familiar_iam"> IAM </label>
+								</div>
+
+								<div class="form-check row">
+									<input class="form-check-input" type="checkbox" id="chk_familiar_acv_ait"
+										ng-model="vm.antecedentes_familiares.acv_ait"> 
+									<label class="form-check-label" for="chk_familiar_acv_ait">ACV / AIT </label>
+								</div>
+							</div>
+
+							<div class="col-lg-6">
+								<div class="form-check row">
+									<input class="form-check-input" type="checkbox" id="chk_familiar_dislipemia"
+										ng-model="vm.antecedentes_familiares.dislipemia"> 
+									<label class="form-check-label" for="chk_familiar_dislipemia">DISLIPEMIA </label>
+								</div>
+
+								<div class="form-check row">
+									<input class="form-check-input" type="checkbox" id="chk_familiar_diabetes"
+										ng-model="vm.antecedentes_familiares.diabetes"> 
+									<label class="form-check-label" for="chk_familiar_diabetes">DIABETES </label>
+								</div>
+
+								<div class="form-check row">
+									<input class="form-check-input" type="checkbox" id="chk_familiar_celiaca"
+										ng-model="vm.antecedentes_familiares.enf_celiaca"> 
+									<label class="form-check-label" for="chk_familiar_celiaca">ENF. CELIACA </label>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">		
+				<div class="card">
+					<div class="card-body">
+										
+					  <div class="input-group mb-3">
+						  	<div class="input-group-prepend">
+						    	<label class="input-group-text" for="sel_diagnosticos_preclasificacion_rcvg">
+						    		PRECLASIFICACION R.C.V.G.
+									</label>
+						  	</div>
+						  	<select class="custom-select" id="sel_diagnosticos_preclasificacion_rcvg" 
+						  		ng-model="vm.diagnosticos.preclasificacion_rcvg">
+									<option	value="{{nivel.id}}" ng-repeat="nivel in vm.array_nivel_de_riesgo_cardiovascular_global"
+										ng-selected="vm.diagnosticos.preclasificacion_rcvg == nivel.id">
+										{{nivel.intervalo}}
+									</option>
+								</select>
+						</div>
+		
+					</div>
+				</div>		
+			</div>
+		</div>
+		
+		

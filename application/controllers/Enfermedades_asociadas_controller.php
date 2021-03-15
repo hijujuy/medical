@@ -1,0 +1,87 @@
+<?php
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+require_once APPPATH . '/libraries/REST_Controller.php';
+require_once APPPATH . '/libraries/Format.php';
+
+class Enfermedades_asociadas_controller extends REST_Controller
+{
+    
+    public function __construct() {
+        parent::__construct();
+        $this->load->model('enfermedades_asociadas_model', 'mymodel');
+    }
+    
+    public function index_get($id = NULL){
+        
+        if (is_null($id))
+        {
+            $this->response(array('error' => 'No se proporciono el ID'), 400);
+        }
+        else{
+            $query = $this->mymodel->get($id);
+            
+            if (!is_null($query))
+            {
+                $this->response(array('enfermedades_asociadas' => $query), 200);
+            }else{
+                $this->response(array('error' => 'El id es inexistente'), 400);
+            }
+        }
+    }//Fin metodo index_get
+    
+    public function index_post($id) {
+        
+        if (is_null($id)) {
+            $this->response(array('error' => 'El ID proporcionado es incorrecto'));
+        }
+        else{
+            
+            if ($this->mymodel->save($id)) {
+                
+                $this->response(array('response' => 'El objeto fue creado exitosamente'), 201);
+            }
+            else{
+                
+                $this->response(array('error' => 'Ocurrio un error en el servidor'), 400);
+            }
+        }        
+    }
+    
+    public function update_post($id) {
+        
+        if (!$this->post('data') || !$id)
+        {
+            $this->response(array('error' => 'No se proporciono el id el post(data)'), 400);
+        }
+        
+        $query = $this->mymodel->update($id, $this->post('data'));
+        
+        if (!is_null($query))
+        {
+            if ($query['update'])
+            {
+                $this->response(array('value' => $query['value']), 200);
+            }
+            else
+            {
+                $this->response(array('error' => $query['value']), 400);
+            }
+        }
+        else
+        {
+            $this->response(array('error' => 'Campo seleccionado es inexistente'), 404);
+        }
+    }
+        
+}
+
+
+
+
+
+
+
+
+

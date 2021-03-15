@@ -1,0 +1,332 @@
+
+<div class="card mt-2 mb-2">
+	<div class="card-header">
+		<div class="col-lg-12 h5">LABORATORIO</div>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="from-group row mb-2">
+					<label class="col-lg-8 col-form-label-sm" for="txt_glucemia_en_ayunas">GLUCEMIA EN AYUNAS:</label>
+					<input class="col-lg-4 form-control-sm" type="number"	id="txt_glucemia_en_ayunas" step="0.01" min="0" 
+						ng-model="vm.laboratorio.glucemia_en_ayunas">
+				</div>
+				<div class="from-group row mb-2">
+					<label class="col-lg-8 col-form-label-sm" for="txt_colesterol_total">COLESTEROL TOTAL:</label>
+					<input class="col-lg-4 form-control-sm" type="number" id="txt_colesterol_total" step="0.01" min="0" 
+						ng-model="vm.laboratorio.colesterol_total">
+				</div>
+				<div class="from-group row mb-2">
+					<label class="col-lg-8 col-form-label-sm" for="txt_trigliceridos">TRIGLICERIDOS:</label>
+					<input class="col-lg-4 form-control-sm" type="number"  id="txt_trigliceridos" step="0.01" min="0"
+						ng-model="vm.laboratorio.trigliceridos">
+				</div>
+				<div class="from-group row">
+					<label class="col-lg-8 col-form-label-sm" for="txt_iga_total">Ig.A TOTAL:</label>
+					<input class="col-lg-4 form-control-sm" type="number" id="txt_iga_total" step="0.01" min="0"
+						ng-model="vm.laboratorio.iga_total">
+				</div>								
+			</div>
+			<div class="col-lg-3">
+				<div class="from-group row mb-2">
+					<label class="col-lg-4 col-form-label-sm">PTOG:</label>
+					<input class="offset-lg-1 col-lg-3 form-control-sm" type="number" id="txt_ptog_desde" ng-model="vm.laboratorio.ptog_desde">
+					<input class="offset-lg-1 col-lg-3 form-control-sm" type="number" id="txt_ptog_hasta" ng-model="vm.laboratorio.ptog_hasta">
+				</div>
+				<div class="from-group row mb-2">
+					<label class="col-lg-4 col-form-label-sm">GOT / GPT:</label>
+					<input class="offset-lg-1 col-lg-3 form-control-sm" type="number" id="txt_got" ng-model="vm.laboratorio.got">
+					<input class="offset-lg-1 col-lg-3 form-control-sm" type="number" id="txt_gpt" ng-model="vm.laboratorio.gpt">
+				</div>
+				<div class="from-group row mb-2">
+					<label class="col-lg-8 col-form-label-sm" for="txt_colesterol_hdl">COLESTEROL HDL :</label>
+					<input class="col-lg-4 form-control-sm" type="number" id="txt_colesterol_hdl" ng-model="vm.laboratorio.colesterol_hdl">
+				</div>
+				<div class="from-group row mb-2">
+					<label class="col-lg-8 col-form-label-sm" for="txt_colesterol_ldl">COLESTEROL LDL :</label>
+					<input class="col-lg-4 form-control-sm" type="number" id="txt_colesterol_ldl" ng-model="vm.laboratorio.colesterol_ldl">
+				</div>
+			</div>
+			<div class="offset-lg-1 col-lg-2">
+				<div class="from-group row mb-2">
+					<label class="col-lg-6 col-form-label-sm" for="txt_hba1c">HbA1c</label>
+					<input class="col-lg-6 form-control-sm" type="number" id="txt_hba1c" ng-model="vm.laboratorio.hba1c">
+				</div>
+				<div class="from-group row mb-2">
+					<label class="col-lg-6 col-form-label-sm" for="txt_fal">FAL</label>
+					<input class="col-lg-6 form-control-sm" type="number" id="txt_fal" ng-model="vm.laboratorio.fal">
+				</div>
+				<div class="from-group row mb-2">
+					<label class="col-lg-6 col-form-label-sm" for="txt_fg">FG</label>
+					<input class="col-lg-6 form-control-sm" type="number" id="txt_fg" ng-model="vm.laboratorio.fg">
+				</div>
+				<div class="from-group row mb-2">
+					<label class="col-lg-6 col-form-label-sm" for="txt_urea">UREA</label>
+					<input class="col-lg-6 form-control-sm" type="number" id="txt_urea" ng-model="vm.laboratorio.urea">
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="from-group row mb-2">
+					<label class="col-lg-9 col-form-label-sm" for="txt_creatinina">CREATININA</label>
+					<input class="col-lg-3 form-control-sm" type="number" id="txt_creatinina" ng-model="vm.laboratorio.creatinina">
+				</div>
+				<div class="from-group row mb-2">
+					<label class="col-lg-9 col-form-label-sm" for="txt_proteinuria">PROTEINURIA</label>
+					<input class="col-lg-3 form-control-sm" type="number" id="txt_proteinuria" ng-model="vm.laboratorio.proteinuria">
+				</div>
+				<div class="from-group row mb-2">
+					<label class="col-lg-9 col-form-label-sm" for="txt_clearence_de_creatinina">CLEARENCE DE	CREATININA</label>
+					<input class="col-lg-3 form-control-sm" type="number" id="txt_clearence_de_creatinina" ng-model="vm.laboratorio.clearence_de_creatinina">
+				</div>
+				<div class="from-group row mb-2">
+					<label class="col-lg-9 col-form-label-sm" for="txt_proteinuria_creatininuria">PROTEINURIA/CREATININURIA</label>
+					<input class="col-lg-3 form-control-sm" type="number" id="txt_proteinuria_creatininuria" ng-model="vm.laboratorio.proteinuria_creatininuria">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="from-group row">
+					<label class="col-lg-9 col-form-label-sm" for="txt_antitransglutaminasa">ANTICUERPO ANTITRANSGLUTAMINASA</label>
+					<input class="col-lg-3 form-control-sm" type="number" id="txt_antitransglutaminasa" ng-model="vm.laboratorio.antitransglutaminasa">
+				</div>
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<div class="col-lg-5">
+				<div class="input-group mb-3">
+				  	<div class="input-group-prepend">
+				    	<label class="input-group-text" for="txt_laboratorio_microalbuminuria">MICROALBUMINURIA</label>
+				  	</div>
+				  	<label class="form-control" id="">{{vm.laboratorio_intervalo_microalbuminuria}}</label>
+				  	<input type="text" class="form-control" id="txt_laboratorio_microalbuminuria"
+				  		ng-model="vm.laboratorio.microalbuminuria" ng-blur="vm.setIntervaloMicroalbuminuria()">
+				</div>	
+			</div>
+			<div class="col-lg-1"></div>
+			<div class="col-lg-6">
+				<div class="input-group mb-3">
+				  	<div class="input-group-prepend">
+				    	<label class="input-group-text" for="txt_laboratorio_nivel_de_riesgo_cardiovascular_global">
+				    		NIVEL DE RIESGO CARDIOVASCULAR GLOBAL
+						</label>
+				  	</div>
+				  	<select class="custom-select col-lg-6" id="sel_nivel_de_riesgo_cardiovascular_global" 
+				  		ng-model="vm.laboratorio.nivel_de_riesgo_cardiovascular_global">
+							<option	value="{{nivel.id}}" ng-repeat="nivel in vm.array_nivel_de_riesgo_cardiovascular_global"
+								ng-selected="vm.laboratorio.nivel_de_riesgo_cardiovascular_global == nivel.id">
+								{{nivel.intervalo}}
+							</option>
+						</select>
+				</div>					
+			</div>			
+		</div>
+		
+		<hr>
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="form-group row">					
+						<label class="col-lg-6 h5">
+							INTERNACIONES RELACIONADAS CON ENFERMEDAD DE BASE							
+						</label>
+						<button class="btn btn-sm btn-outline-primary" data-toggle="modal" title="Haga clic para agregar una internacion" data-target="#create-internacion">
+							<i class="fa fa-calendar-plus-o"></i>
+						</button>
+				</div>
+				<div class="row">
+					<div class="col-lg-4">
+						<table class="table table-sm table-hover text-center">
+						  <thead>
+						    <tr>
+						      <th>FECHA</th>
+						      <th>DIAS</th>
+						      <th colspan="3">ACCIONES</th>   
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr ng-repeat="internacion in vm.internaciones_relacionadas_con_enfermedad_de_base">
+						      <td>{{internacion.fecha}}</td>
+						      <td>{{internacion.dias}}</td>
+						      <td>
+						      	<button class="btn btn-sm btn-outline-success" title="Ver causas de internacion"
+						      		data-toggle="modal" data-target="#view-internacion" 
+						      		ng-click="vm.setInternacion(internacion.id)">
+						      		<i class="fa fa-folder-open-o"></i>
+						      	</button>
+						      </td>
+						      <td>
+						      	<button class="btn btn-sm btn-outline-success" title="Modificar esta internacion"
+						      		data-toggle="modal" data-target="#edit-internacion" 
+						      		ng-click="vm.editInternacion(internacion.id)">
+						      		<i class="fa fa-pencil"></i>
+						      	</button>
+						      </td>
+						      <td>
+						      	<button class="btn btn-sm btn-outline-danger" title="Eliminar esta internacion"
+						      		data-toggle="modal" data-target="#delete-internacion"
+						      		ng-click="vm.setIdBeforeDelete(internacion.id)">
+						      		<i class="fa fa-trash-o"></i>
+						      	</button>
+						      </td>						      								      
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+					<div class="offset-lg-1 col-lg-7 text-center">
+						<div class="">
+							<table class="table table-sm">
+							  <thead>
+							    <tr>
+							      <th>CAUSAS</th>					      
+							    </tr>
+							  </thead>
+							  <tbody>
+							  	<tr>
+							  	  <td>
+								    <textarea class="form-control" id="txt_internaciones_causas" name="txt_internaciones_causas" 
+								    	rows="3" cols="60" ng-model="vm.internacion.causas" disabled></textarea>
+								  </td>
+								</tr>
+							  </tbody>
+							</table>
+						</div>
+					</div>
+			  	</div>
+			</div>									
+		</div>
+		
+		<hr>
+		
+		<div class="row">
+			<div class="col-lg-12">				
+				<div class="row">
+					<div class="col-lg-12">			
+					<div class="form-group row">
+						<div class="col-lg-4 col-form-label">
+							PARTICIPACION EN TALLERES DE AUTOCUIDADO:
+						</div>
+						<div class="col-lg-2 form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="rad_laboratorio_participacion_talleres" 
+								id="rad_laboratorio_participacion_talleres0" value="0" ng-model="vm.laboratorio.participacion_talleres_autocuidado">
+							<label class="form-check-label" for="rad_laboratorio_participacion_talleres0">NO</label>
+						</div>
+						<div class="col-lg-2 form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="rad_laboratorio_participacion_talleres" 
+								id="rad_laboratorio_participacion_talleres1" value="1" ng-model="vm.laboratorio.participacion_talleres_autocuidado">
+							<label class="form-check-label" for="rad_laboratorio_participacion_talleres1">SI</label>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class="form-group row">
+						<div class="col-lg-12">
+							<label class="form-control-label">OBSERVACIONES:</label> 
+							<textarea class="form-control" rows="3" id="txt_laboratorio_observaciones" 
+								ng-model="vm.laboratorio.observaciones"></textarea>
+						</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+</div>
+
+<!-- Create Modal -->
+<div class="modal fade" id="create-internacion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">    	
+        <div class="modal-content">        	                        
+	            <div class="modal-header">
+	                <h4 class="modal-title" id="myModalLabel">Nueva Internacion</h4>
+	                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                	<span aria-hidden="true">&times;</span>
+	                </button>
+	            </div>
+	            <div class="modal-body">
+        			<form name="addInternacion" role="form" >
+						          <div class="form-group col-lg-6">
+						            <label for="recipient-fecha" class="col-form-label">Fecha:</label>
+						            <input type="date" class="form-control" id="recipient-fecha" required 
+						            	ng-model="vm.laboratorio_new_internacion.fecha">
+						          </div>
+						          <div class="form-group col-lg-6">
+						            <label for="recipient-dias" class="col-form-label">Nº dias:</label>
+						            <input type="number" class="form-control" id="recipient-dias"
+						            	ng-model="vm.laboratorio_new_internacion.dias" min="0" required>
+						          </div>
+						          <div class="form-group col-lg-12">
+						            <label for="message-text" class="col-form-label">Causas:</label>
+						            <textarea class="form-control" id="message-text" required 
+						            	ng-model="vm.laboratorio_new_internacion.causas"></textarea>
+						          </div>
+	      			</form>
+	            </div>	           	
+	           	<div class="modal-footer">
+	           		<label ng-show="addInternacion.$invalid">Complete los campos requeridos</label>
+	           		<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+	              <button type="submit" class="btn btn-primary" ng-disabled="addInternacion.$invalid" ng-click="vm.saveAddInternacion()">
+	              	Guardar
+	              </button>
+	           	</div>
+        </div>
+    </div>
+</div>
+
+<!-- Create Modal -->
+<div class="modal fade" id="edit-internacion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">    	
+        <div class="modal-content">        	                        
+	            <div class="modal-header">
+	                <h4 class="modal-title" id="myModalLabel">Actualizar Internacion</h4>
+	                <button type="button" class="close" data-dismiss="modal" title="Cerrar" ng-click="vm.cancelEdit()">
+	                	<span aria-hidden="true">&times;</span>
+	                </button>
+	            </div>
+	          <form name="editInternacion" role="form">
+	            <div class="modal-body">								
+									<input type="hidden" class="form-control" ng-model="vm.form_edit.id"/>
+									<div class="form-group col-lg-6">
+										<label class="col-form-label">Fecha:</label>
+										<input type="date" class="form-control" ng-model="vm.form_edit.fecha" required>
+									</div>
+									<div class="form-group col-lg-6">
+										<label class="col-form-label">Nº dias:</label>
+										<input type="number" class="form-control" ng-model="vm.form_edit.dias" min="0" required>
+									</div>
+									<div class="form-group col-lg-12">
+										<label class="col-form-label">Causas:</label>
+										<textarea class="form-control" ng-model="vm.form_edit.causas" required></textarea>
+									</div>
+							</div>	           	
+	           	<div class="modal-footer">
+	           		<label ng-show="editInternacion.$invalid">Complete los campos requeridos</label>
+	           		<button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.cancelEditInternacion()">Cerrar</button>
+	              <button type="submit" class="btn btn-primary" ng-disabled="editInternacion.$invalid" ng-click="vm.saveEditInternacion()">
+	              	Guardar
+	              </button>
+	           	</div>
+	          </form>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Modal -->
+<div class="modal fade" id="delete-internacion" tabindex="-1" role="dialog" aria-labelledby="ModalDeleteInternacionLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel"><i class="fa fa-trash-o"></i> Eliminar Internacion</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       	Se procederá a remover el registro de internacion completo seleccionado. 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" ng-click="vm.deleteInternacion()">Eliminar Registro</button>
+      </div>
+    </div>
+  </div>
+</div>
