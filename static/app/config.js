@@ -1,4 +1,4 @@
-angular.module('historialApp').
+historialApp.
 	config(['$routeProvider',
 		function ($routeProvider) {
 			$routeProvider.
