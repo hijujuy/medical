@@ -54,6 +54,9 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['templates/(:any)'] = "templates/view/$1";
 
+$route['logout']['get'] = 'usuarios_controller/logout';
+$route['login']['post'] = 'usuarios_controller/login';
+
 $route['historial/(:num)']['get'] = 'historial_controller/index/$1';
 $route['historial']['post'] = 'historial_controller/create';
 $route['historial/(:num)']['post'] = 'historial_controller/update/$1';
